@@ -1,0 +1,17 @@
+10^3 elements on one node
+Elapsed Time: 56.726105557 seconds	Number of Processes: 1
+Elapsed Time: 28.628808422 seconds	Number of Processes: 2
+Elapsed Time: 14.827415089000002 seconds	Number of Processes: 4
+Elapsed Time: 8.068533785 seconds	Number of Processes: 8
+Elapsed Time: 4.62155035 seconds	Number of Processes: 16
+Elapsed Time: 3.065826866 seconds	Number of Processes: 32
+Elapsed Time: 2.6109270330000003 seconds	Number of Processes: 64
+Elapsed Time: 3.8019038509999987 seconds	Number of Processes: 128
+10^4 elements on one node
+Elapsed Time: 557.83067595 seconds	Number of Processes: 1
+Elapsed Time: 283.85396591600005 seconds	Number of Processes: 2
+Elapsed Time: 142.796024688 seconds	Number of Processes: 4
+Elapsed Time: 73.557637842 seconds	Number of Processes: 8
+Elapsed Time: 39.280646817 seconds	Number of Processes: 16
+Elapsed Time: 21.241718279 seconds	Number of Processes: 32
+Elapsed Time: 14.352864545 seconds	Number of Processes: 64

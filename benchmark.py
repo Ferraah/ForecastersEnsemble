@@ -1,10 +1,20 @@
+# This file behaviour is the same as test_parallel.py,
+# with the addition of run times saving.
+
 from forecasters.forecaster import *
 from mpi4py import *
 from mpiDistribution import MPIDistributionStrategy
 from util import *
+from time import process_time
+
+comm = MPI.COMM_WORLD
+rank = comm.Get_rank()  
+size = comm.Get_size()
 
 if not MPI.Is_initialized():
     mpi.Init()
+
+start_time = process_time()
 
 X = None
 y = None
@@ -35,7 +45,17 @@ forecaster.run_forecasting(5, X)
 
 res, bias, weights = forecaster.gather_results()
 
-if forecaster.rank == 0:
+end_time = process_time()
+elapsed_time = end_time - start_time
+num_processes = forecaster.size
+
+
+if comm.Get_rank() == 0:
+
+    with open("running_times.txt", "a") as f:
+        f.write(f"Elapsed Time: {elapsed_time} seconds\t")
+        f.write(f"Number of Processes: {size}\n")
+
     store_predictions_csv(res, forecaster.input_size, forecaster.horizon, "predictions.csv")
     store_biases_csv(bias, "biases.csv")
     store_weights_csv(weights, forecaster.input_size, 6,"weights.csv")
