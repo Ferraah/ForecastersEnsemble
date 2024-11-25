@@ -15,3 +15,4 @@ Elapsed Time: 73.557637842 seconds	Number of Processes: 8
 Elapsed Time: 39.280646817 seconds	Number of Processes: 16
 Elapsed Time: 21.241718279 seconds	Number of Processes: 32
 Elapsed Time: 14.352864545 seconds	Number of Processes: 64
+Elapsed Time: 10.392651199000001 seconds	Number of Processes: 128
